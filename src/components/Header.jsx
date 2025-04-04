@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   const headerStyle = {
-    background: 'linear-gradient(135deg, #2c3e50 0%, #3498db 100%)',
+    background: 'linear-gradient(135deg, #4a1066 0%, #e74c3c 100%)',
     color: '#fff',
     padding: '60px 20px 40px',
     textAlign: 'center',
