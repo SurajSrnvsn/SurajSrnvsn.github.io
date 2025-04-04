@@ -1,4 +1,4 @@
-# Resume
+# Personal Resume Website
 
 This repository contains my professional resume hosted using GitHub Pages.
 
@@ -8,7 +8,7 @@ This is a simple, responsive HTML/CSS resume that showcases my skills, experienc
 
 ## Accessing the Resume
 
-You can view my resume at: https://[your-github-username].github.io/Resume/
+You can view my resume at: https://surajsrnvsn.github.io/
 
 ## Development
 
