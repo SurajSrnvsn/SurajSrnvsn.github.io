@@ -55,10 +55,10 @@ const Header = () => {
     <header style={headerStyle}>
       <div style={patternStyle}></div>
       <div style={contentStyle}>
-        <h1 style={nameStyle}>Suraj Srnvsn</h1>
-        <h2 style={titleStyle}>Full-Stack Developer & AI Engineer</h2>
+        <h1 style={nameStyle}>Suraj Srinivasan</h1>
+        <h2 style={titleStyle}>Software Engineer</h2>
         <p style={subtitleStyle}>
-          Building innovative applications at the intersection of web, mobile, and artificial intelligence
+          Backend development, system design, and building scalable applications with AI/ML expertise
         </p>
       </div>
     </header>

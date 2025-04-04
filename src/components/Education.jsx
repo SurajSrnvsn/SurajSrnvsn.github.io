@@ -25,16 +25,16 @@ const Education = () => {
 
   const education = [
     {
-      school: 'University of Technology',
-      degree: 'Master of Science in Computer Science',
-      date: '2015 - 2017',
-      description: 'Specialized in artificial intelligence and machine learning. Graduated with distinction.'
+      school: 'IIIT Bangalore',
+      degree: 'Executive PG in ML & AI',
+      date: '2021 - 2022',
+      description: ''
     },
     {
-      school: 'State University',
-      degree: 'Bachelor of Science in Software Engineering',
-      date: '2011 - 2015',
-      description: 'Completed capstone project on developing efficient algorithms for data processing.'
+      school: 'Ramakrishna Mission Vivekananda College',
+      degree: 'BCA',
+      date: '2016 - 2019',
+      description: ''
     }
   ];
 
@@ -46,7 +46,7 @@ const Education = () => {
           <h3 style={schoolStyle}>{edu.school}</h3>
           <div style={degreeStyle}>{edu.degree}</div>
           <div style={dateStyle}>{edu.date}</div>
-          <p>{edu.description}</p>
+          {edu.description && <p>{edu.description}</p>}
         </div>
       ))}
     </section>

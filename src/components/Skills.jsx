@@ -29,20 +29,32 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      name: 'Frontend Development',
-      skills: ['React', 'React Native', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Redux', 'Responsive Design']
+      name: 'Languages',
+      skills: ['Python', 'Go', 'SQL', 'Scala', 'JavaScript']
     },
     {
-      name: 'Backend Development',
-      skills: ['Django', 'Go', 'Node.js', 'Express', 'RESTful APIs', 'GraphQL', 'SQL/NoSQL Databases']
+      name: 'Data Engineering',
+      skills: ['Apache Spark', 'Airflow', 'Databricks', 'DBT', 'Fivetran']
     },
     {
-      name: 'AI & Machine Learning',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI API', 'Gemini API', 'LLaMA', 'RAG/CAG Systems']
+      name: 'Cloud & Infrastructure',
+      skills: ['AWS', 'GCP', 'Docker', 'Git']
     },
     {
-      name: 'DevOps & Tools',
-      skills: ['Git', 'Docker', 'CI/CD', 'AWS', 'GCP', 'Testing', 'Agile Methodologies']
+      name: 'Databases',
+      skills: ['Snowflake', 'BigQuery', 'Redshift', 'PostgreSQL', 'MySQL', 'DynamoDB', 'MSSQL']
+    },
+    {
+      name: 'Machine Learning',
+      skills: ['LangChain', 'Ollama', 'GPT', 'RAG techniques']
+    },
+    {
+      name: 'Web & Mobile',
+      skills: ['Django', 'ReactJS', 'React Native', 'REST']
+    },
+    {
+      name: 'BI Tools',
+      skills: ['Tableau']
     }
   ];
 

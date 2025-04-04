@@ -23,24 +23,46 @@ const Experience = () => {
     marginBottom: '8px'
   };
 
+  const bulletStyle = {
+    display: 'flex',
+    marginBottom: '5px',
+  };
+
+  const bulletPointStyle = {
+    minWidth: '8px',
+    marginRight: '10px',
+    marginTop: '8px',
+    height: '8px',
+    width: '8px',
+    backgroundColor: '#3498db',
+    borderRadius: '50%',
+  };
+
   const jobs = [
     {
-      company: 'Tech Innovations Inc.',
-      position: 'Senior Software Engineer',
-      date: 'Jan 2022 - Present',
-      description: 'Led development of core features for the company\'s flagship product. Mentored junior developers and implemented best practices for code quality.'
+      company: 'Comcast - Sky',
+      position: 'Engineer II',
+      date: 'Jan 2023 - May 2024',
+      responsibilities: [
+        'Built an in-house AI-powered data ingestion tool for metadata extraction and content generation.',
+        'Developed a finance-focused RAG system using LLMs and dynamic SQL generation.',
+        'Managed operational analytics with 12+ Airflow jobs for Sky Germany.',
+        'Set up ML model monitoring pipelines with automatic retraining.',
+        'Reduced processing time by 66% using parallel task execution in Airflow.'
+      ]
     },
     {
-      company: 'Digital Solutions LLC',
-      position: 'Software Developer',
-      date: 'Mar 2019 - Dec 2021',
-      description: 'Developed and maintained web applications using React and Node.js. Collaborated with the UX team to implement responsive designs.'
-    },
-    {
-      company: 'CodeCraft Studios',
-      position: 'Junior Developer',
-      date: 'Jun 2017 - Feb 2019',
-      description: 'Assisted in building and testing features for client websites. Participated in code reviews and quality assurance processes.'
+      company: 'Systech Solutions - FOX',
+      position: 'Software Engineer',
+      date: 'Jan 2020 - Dec 2022',
+      responsibilities: [
+        'Built React Native features for data collection and ML integration.',
+        'Designed ETL pipelines in Databricks using delta tables (30% faster).',
+        'Integrated data from Operative One, Freewheel, and other platforms.',
+        'Created data models for Redshift and DynamoDB.',
+        'Developed AWS Lambda-based real-time systems for SCTE.',
+        'Built dashboards in Tableau for FOX finance & engagement analytics.'
+      ]
     }
   ];
 
@@ -52,7 +74,12 @@ const Experience = () => {
           <h3 style={companyStyle}>{job.company}</h3>
           <div style={positionStyle}>{job.position}</div>
           <div style={dateStyle}>{job.date}</div>
-          <p>{job.description}</p>
+          {job.responsibilities.map((responsibility, respIndex) => (
+            <div key={respIndex} style={bulletStyle}>
+              <div style={bulletPointStyle}></div>
+              <div>{responsibility}</div>
+            </div>
+          ))}
         </div>
       ))}
     </section>

@@ -73,16 +73,9 @@ const Contact = () => {
     </svg>
   );
 
-  const GitHubIcon = () => (
+  const PhoneIcon = () => (
     <svg style={iconStyle} viewBox="0 0 24 24" fill="none" stroke="#3498db" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-    </svg>
-  );
-
-  const LocationIcon = () => (
-    <svg style={iconStyle} viewBox="0 0 24 24" fill="none" stroke="#3498db" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-      <circle cx="12" cy="10" r="3"></circle>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   );
 
@@ -91,27 +84,23 @@ const Contact = () => {
       <h2 className="section-title">Contact</h2>
       <div style={contactStyle}>
         <div style={contactItemStyle}>
+          <PhoneIcon />
+          <a style={linkStyle} href="tel:9094301550">9094301550</a>
+        </div>
+        <div style={contactItemStyle}>
           <EmailIcon />
-          <a style={linkStyle} href="mailto:youremail@example.com">youremail@example.com</a>
+          <a style={linkStyle} href="mailto:surajsrnvsn@gmail.com">surajsrnvsn@gmail.com</a>
         </div>
         <div style={contactItemStyle}>
           <LinkedInIcon />
-          <a style={linkStyle} href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a>
-        </div>
-        <div style={contactItemStyle}>
-          <GitHubIcon />
-          <a style={linkStyle} href="https://github.com/SurajSrnvsn" target="_blank" rel="noopener noreferrer">github.com/SurajSrnvsn</a>
-        </div>
-        <div style={contactItemStyle}>
-          <LocationIcon />
-          <span>Your City, Country</span>
+          <a style={linkStyle} href="https://linkedin.com/in/suraj-srinivasan" target="_blank" rel="noopener noreferrer">linkedin.com/in/suraj-srinivasan</a>
         </div>
       </div>
 
       <div style={{ marginTop: '30px' }}>
         <h3 style={{ fontSize: '1.1rem', marginBottom: '15px' }}>Get In Touch</h3>
         <p style={{ marginBottom: '15px' }}>
-          I'm always open to discussing new projects, opportunities, and collaborations. Feel free to reach out!
+          I'm always open to discussing new opportunities in software engineering, data engineering, and AI/ML projects. Feel free to reach out!
         </p>
       </div>
     </section>
