@@ -276,34 +276,65 @@ const Projects = () => {
     },
     {
       id: 7,
-      title: 'Nifty50 Context-Augmented Generation',
-      type: 'Hobby Project',
-      client: 'Personal',
-      tech: ['Python', 'Gemini 2M API', 'Pandas', 'NumPy', 'Streamlit', 'Redis', 'Docker', 'Plotly'],
-      description: 'Financial analysis tool using preloaded stock data context for LLM-based insights.',
-      details: 'Developed an experimental context-augmented generation system that loads 3 years of Nifty50 stock data directly into the prompt context. This approach enables the LLM to answer detailed questions about stock performance without additional API calls or database queries.',
+      title: 'Finance Intelligence RAG System',
+      type: 'Enterprise Solution',
+      client: 'Comcast',
+      tech: ['Python', 'LangChain', 'OpenAI', 'SQL', 'FastAPI', 'Redis', 'Snowflake', 'Docker'],
+      description: 'AI-powered financial data retrieval and reporting system using advanced RAG techniques with dynamic SQL generation.',
+      details: 'Developed an enterprise-grade financial intelligence system leveraging Retrieval-Augmented Generation to translate natural language financial questions into precise SQL queries. The system works across multiple database schemas without predefined mappings, providing accurate financial insights with comprehensive data security controls.',
       challenges: [
-        'Efficiently formatting large datasets for context inclusion with compression',
-        'Optimizing prompt design for financial analysis questions and terminology',
-        'Balancing context size with model token limitations',
-        'Handling real-time market data updates and synchronization'
+        'Ensuring accurate financial calculations and data security across multiple database schemas',
+        'Optimizing token usage and retrieval relevance for complex financial queries',
+        'Handling context limitations when dealing with large financial datasets',
+        'Building dynamic SQL generation with robust injection protection and audit trails'
       ],
       keyFeatures: [
-        'Pre-loaded financial data context with efficient compression',
-        'Real-time query processing without database lookups',
-        'Technical and fundamental analysis capabilities with visualization',
-        'Interactive visualization of results with custom charts',
-        'Historical data analysis with trend detection',
-        'Custom financial indicators and metrics calculation'
+        'Natural language to SQL translation with schema awareness and financial domain knowledge',
+        'Multi-schema support working across 8 different database structures without predefined mappings',
+        'Context-aware response formatting with financial data and explanation of calculations',
+        'Comprehensive security controls with token-level access management and query validation',
+        'Query optimization and caching system for improved performance on common financial requests',
+        'Full audit logging and compliance tracking for all financial data access'
       ],
       achievements: [
-        'Reduced response time to under 2 seconds for complex queries',
-        'Achieved 85% accuracy in technical analysis predictions',
-        'Implemented real-time data updates with 99.9% reliability',
-        'Supported 50+ custom financial indicators'
+        'Achieved 95% accuracy in financial query generation and reporting',
+        'Reduced financial data retrieval time from hours to seconds',
+        'Implemented role-based security with zero vulnerabilities',
+        'Deployed to production with 99.9% uptime for critical financial operations'
       ],
       video: null,
-      imagePlaceholder: 'Dashboard showing stock analysis and natural language query interface'
+      imagePlaceholder: 'Financial intelligence dashboard showing natural language query and resulting financial data visualization'
+    },
+    {
+      id: 8,
+      title: 'AI-Powered Metadata Extraction System',
+      type: 'Enterprise Solution',
+      client: 'Sky',
+      tech: ['Python', 'NLP', 'Computer Vision', 'AWS', 'Airflow', 'MongoDB', 'Docker', 'FastAPI'],
+      description: 'Automated media content analysis system using AI for metadata extraction and enhancement.',
+      details: 'Built an enterprise media asset processing system that uses advanced AI techniques to automatically extract, categorize, and enhance metadata for video content. The solution combines NLP for transcript analysis, computer vision for scene detection, and custom ML models for content classification.',
+      challenges: [
+        'Processing diverse media formats and handling large video files efficiently',
+        'Training specialized NLP and CV models for media-specific content recognition',
+        'Building a scalable architecture capable of handling thousands of media assets daily',
+        'Ensuring high accuracy while minimizing false positives in content classification'
+      ],
+      keyFeatures: [
+        'Automated scene detection and classification using custom computer vision models',
+        'Transcript analysis for dialogue categorization and sentiment analysis',
+        'Content moderation and compliance flagging with human-in-the-loop verification',
+        'Taxonomy mapping and metadata enrichment from multiple reference sources',
+        'Scalable processing pipeline with automatic prioritization and load balancing',
+        'Comprehensive management dashboard with quality metrics and accuracy reporting'
+      ],
+      achievements: [
+        'Reduced manual tagging time by 78% across 50K+ media assets',
+        'Improved content discoverability with 92% more accurate metadata',
+        'Processed over 10,000 hours of video content with 95% accuracy',
+        'Decreased time-to-market for new content by 40%'
+      ],
+      video: null,
+      imagePlaceholder: 'Media processing dashboard showing automated metadata extraction in progress with ML confidence scores'
     }
   ];
 
