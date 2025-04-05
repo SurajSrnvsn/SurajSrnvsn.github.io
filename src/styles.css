@@ -51,6 +51,28 @@ body {
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid #2c3e50;
+  position: relative;
+}
+
+.resume-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    #FF0D72, #0DC2FF, #0DFF72, #F538FF, 
+    #FF8E0D, #FFE138, #3877FF, #FF0D72);
+  background-size: 200% 100%;
+  animation: tetrisBorder 3s linear infinite;
+}
+
+@keyframes tetrisBorder {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
 }
 
 /* Light Theme Section */
@@ -72,9 +94,18 @@ body {
 }
 
 .section {
-  padding: 30px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #2c3e50;
+  background: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease;
+  position: relative;
   animation: fadeIn 0.5s ease-in-out;
-  transition: all 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Light Theme Section Title */
@@ -98,22 +129,25 @@ body {
 }
 
 .section-title {
-  margin-bottom: 20px;
+  color: #2c3e50;
   font-size: 1.8rem;
-  font-weight: 500;
-  padding-bottom: 8px;
-  display: inline-block;
+  margin-bottom: 20px;
   position: relative;
+  display: inline-block;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  width: 50%;
-  height: 3px;
-  bottom: -3px;
+  bottom: -5px;
   left: 0;
-  transition: width 0.3s ease;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    #FF0D72, #0DC2FF, #0DFF72, #F538FF, 
+    #FF8E0D, #FFE138, #3877FF);
+  background-size: 200% 100%;
+  animation: tetrisBorder 3s linear infinite;
 }
 
 .section-title:hover::after {
@@ -141,10 +175,24 @@ body {
 a {
   text-decoration: none;
   transition: color 0.3s ease;
+  position: relative;
 }
 
-a:hover {
-  text-decoration: underline;
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    #FF0D72, #0DC2FF, #0DFF72, #F538FF, 
+    #FF8E0D, #FFE138, #3877FF);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* Animation for sections */
@@ -182,4 +230,53 @@ a:hover {
   .section-title {
     font-size: 1.5rem;
   }
+}
+
+/* Tetris-themed buttons */
+button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: all 0.5s ease;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+/* Dark mode adjustments */
+.dark .resume-wrapper {
+  background: rgba(30, 30, 30, 0.95);
+  border-color: #3498db;
+}
+
+.dark .section {
+  background: rgba(40, 40, 40, 0.9);
+  border-color: #3498db;
+}
+
+.dark .section-title {
+  color: #3498db;
+}
+
+.dark a {
+  color: #3498db;
 } 

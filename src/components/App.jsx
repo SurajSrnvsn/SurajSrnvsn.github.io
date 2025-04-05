@@ -7,6 +7,8 @@ import Projects from './Projects';
 import Education from './Education';
 import Contact from './Contact';
 import ThemeToggle from './ThemeToggle';
+import TetrisBackground from './TetrisBackground';
+import TetrisGame from './TetrisGame';
 import { ThemeContext } from '../ThemeContext';
 
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
 
   return (
     <div className={`container ${theme}`}>
+      <TetrisBackground />
       <div className="resume-wrapper">
         <Header />
         <About />
@@ -24,6 +27,7 @@ const App = () => {
         <Contact />
       </div>
       <ThemeToggle />
+      <TetrisGame />
     </div>
   );
 };
