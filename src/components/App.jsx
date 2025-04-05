@@ -16,15 +16,16 @@ const App = () => {
   const containerStyle = {
     minHeight: '100vh',
     background: theme === 'light' 
-      ? 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'
-      : 'linear-gradient(135deg, #0a192f 0%, #112240 100%)',
+      ? 'linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%)'
+      : 'linear-gradient(135deg, #1a1f2c 0%, #2d3748 100%)',
     transition: 'all 0.3s ease',
+    padding: '2rem 0',
   };
 
   const resumeWrapperStyle = {
     maxWidth: '1200px',
     margin: '0 auto',
-    padding: '20px',
+    padding: '0 1.5rem',
   };
 
   return (
