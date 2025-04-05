@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Header from './Header';
 import About from './About';
 import Skills from './Skills';
@@ -7,15 +7,11 @@ import Projects from './Projects';
 import TetrisGame from './TetrisGame';
 import Education from './Education';
 import Contact from './Contact';
-import ThemeToggle from './ThemeToggle';
 import TetrisBackground from './TetrisBackground';
-import { ThemeContext } from '../ThemeContext';
 
 const App = () => {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className={`container ${theme}`}>
+    <div className="container">
       <TetrisBackground />
       <div className="resume-wrapper">
         <Header />
@@ -27,7 +23,6 @@ const App = () => {
         <Education />
         <Contact />
       </div>
-      <ThemeToggle />
     </div>
   );
 };

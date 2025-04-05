@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const TetrisGame = () => {
-  const [isVisible, setIsVisible] = useState(true);
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const canvasRef = useRef(null);
@@ -11,17 +10,17 @@ const TetrisGame = () => {
     nextPiece: null,
     position: { x: 0, y: 0 },
     gameLoop: null,
-    speed: 500 // Initial speed in milliseconds
+    speed: 300 // Faster initial speed
   });
 
   const colors = [
-    '#FF0D72', // I
-    '#0DC2FF', // J
-    '#0DFF72', // L
-    '#F538FF', // O
-    '#FF8E0D', // S
-    '#FFE138', // T
-    '#3877FF'  // Z
+    '#FFFF00', // Yellow (I)
+    '#FFA500', // Orange (J)
+    '#FF0000', // Red (L)
+    '#00FF00', // Green (O)
+    '#0000FF', // Blue (S)
+    '#800080', // Purple (T)
+    '#FF00FF'  // Magenta (Z)
   ];
 
   const shapes = [
@@ -170,7 +169,7 @@ const TetrisGame = () => {
     if (linesCleared > 0) {
       setScore(prev => prev + linesCleared * 100);
       // Increase speed based on score
-      gameState.current.speed = Math.max(100, 500 - Math.floor(score / 1000) * 50);
+      gameState.current.speed = Math.max(100, 300 - Math.floor(score / 1000) * 50);
       clearInterval(gameState.current.gameLoop);
       gameState.current.gameLoop = setInterval(moveDown, gameState.current.speed);
     }
@@ -181,14 +180,14 @@ const TetrisGame = () => {
     gameState.current.currentPiece = createPiece();
     setGameOver(false);
     setScore(0);
-    gameState.current.speed = 500; // Reset speed
+    gameState.current.speed = 300; // Reset speed
     clearInterval(gameState.current.gameLoop);
     gameState.current.gameLoop = setInterval(moveDown, gameState.current.speed);
   };
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!isVisible || gameOver) return;
+      if (gameOver) return;
       
       switch (e.key) {
         case 'ArrowLeft':
@@ -208,7 +207,7 @@ const TetrisGame = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isVisible, gameOver]);
+  }, [gameOver]);
 
   return (
     <section className="section">
@@ -228,13 +227,11 @@ const TetrisGame = () => {
             width={300}
             height={600}
             style={{
-              border: '2px solid #2c3e50',
+              border: '4px solid #FFFF00',
               borderRadius: '4px',
-              backgroundColor: 'rgba(0, 0, 0, 0.8)',
-              filter: isVisible ? 'none' : 'blur(5px)',
-              transition: 'filter 0.3s ease'
+              backgroundColor: '#000000',
+              boxShadow: '0 0 20px rgba(255, 255, 0, 0.5)'
             }}
-            onClick={() => setIsVisible(!isVisible)}
           />
           {gameOver && (
             <div style={{
@@ -242,8 +239,9 @@ const TetrisGame = () => {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              color: 'white',
-              textAlign: 'center'
+              color: '#FFFF00',
+              textAlign: 'center',
+              textShadow: '0 0 5px #000000'
             }}>
               <h3>Game Over!</h3>
               <p>Score: {score}</p>
@@ -255,7 +253,12 @@ const TetrisGame = () => {
                 style={{
                   padding: '8px 16px',
                   marginTop: '10px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  backgroundColor: '#FFFF00',
+                  color: '#000000',
+                  border: 'none',
+                  borderRadius: '4px',
+                  fontWeight: 'bold'
                 }}
               >
                 Play Again
@@ -266,13 +269,14 @@ const TetrisGame = () => {
             position: 'absolute',
             top: '10px',
             left: '10px',
-            color: 'white',
-            fontSize: '14px'
+            color: '#FFFF00',
+            fontSize: '14px',
+            textShadow: '0 0 5px #000000'
           }}>
             Score: {score}
           </div>
         </div>
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', color: '#FFFF00' }}>
           <p>Controls:</p>
           <p>← → : Move | ↑ : Rotate | ↓ : Drop Faster</p>
           <button 
@@ -280,7 +284,12 @@ const TetrisGame = () => {
             style={{
               padding: '8px 16px',
               marginTop: '10px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              backgroundColor: '#FFFF00',
+              color: '#000000',
+              border: 'none',
+              borderRadius: '4px',
+              fontWeight: 'bold'
             }}
           >
             Start Game
