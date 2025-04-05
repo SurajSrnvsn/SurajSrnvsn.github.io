@@ -1,27 +1,22 @@
 import React from 'react';
 
 const About = () => {
-  const paragraphStyle = {
-    marginBottom: '15px'
-  };
-
-  const highlightStyle = {
-    fontWeight: '500',
-    color: '#3498db'
-  };
-
   return (
     <section className="section">
       <h2 className="section-title">About Me</h2>
-      <p style={paragraphStyle}>
-        Data-driven Software Engineer with <span style={highlightStyle}>4+ years of experience</span> specializing in backend development, data pipelines, and AI/ML integration. Known for optimizing workflows that deliver measurable business impact through technical excellence.
-      </p>
-      <p style={paragraphStyle}>
-        My expertise spans designing <span style={highlightStyle}>high-performance ETL systems</span> (improving throughput by up to 66%), implementing <span style={highlightStyle}>scalable AI solutions</span> for enterprise clients, and developing <span style={highlightStyle}>cloud-native applications</span> with AWS and GCP.
-      </p>
-      <p style={paragraphStyle}>
-        I excel at translating complex business requirements into elegant technical solutions, particularly for data-intensive applications in the media and entertainment industry, with a focus on creating value through analytics and automation.
-      </p>
+      <div className="about-content">
+        <p>
+          I am a Software Engineer with experience in test automation and CI/CD pipeline development. 
+          I specialize in creating efficient testing solutions and automated workflows using Python, 
+          Selenium, and Jenkins. My focus is on improving software quality through automation and 
+          implementing best practices in software development.
+        </p>
+        <p>
+          I have hands-on experience in developing and maintaining Jenkins pipelines, creating 
+          Python scripts for test automation, and implementing automation frameworks. I am 
+          passionate about learning new technologies and applying them to solve real-world problems.
+        </p>
+      </div>
     </section>
   );
 };
