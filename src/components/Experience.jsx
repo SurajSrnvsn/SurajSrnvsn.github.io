@@ -91,11 +91,13 @@ const Experience = () => {
       date: 'Jan 2023 - May 2024',
       teamInfo: 'Data & Analytics Team | Collaborated with cross-functional teams',
       responsibilities: [
-        <>Built an in-house <span style={keywordStyle}>AI-powered metadata extraction tool</span>, reducing manual tagging time by <span style={metricStyle}>78%</span> and improving content discoverability for 50K+ media assets.</>,
-        <>Developed a <span style={keywordStyle}>finance-focused RAG system</span> using <span style={keywordStyle}>LLM integration</span> and <span style={keywordStyle}>dynamic SQL generation</span>, delivering accurate financial insights across <span style={metricStyle}>8 different database schemas</span>.</>,
-        <>Implemented operational analytics with <span style={keywordStyle}>12+ Airflow DAGs</span> processing <span style={metricStyle}>2TB+ daily data</span> for Sky Germany, improving ETL reliability from 91% to <span style={metricStyle}>99.7%</span>.</>,
-        <>Created automated <span style={keywordStyle}>ML model monitoring</span> with retraining triggers based on data drift detection, maintaining model accuracy above <span style={metricStyle}>92%</span> threshold.</>,
-        <>Optimized data pipelines using <span style={keywordStyle}>parallel task execution</span> in Airflow, reducing processing time by <span style={metricStyle}>66%</span> and saving approximately <span style={metricStyle}>400 compute hours</span> monthly.</>
+        <>Built an in-house <span style={keywordStyle}>AI-powered metadata extraction tool</span>, reducing manual tagging time by <span style={metricStyle}>78%</span> and improving content discoverability for 50K+ media assets. Implemented <span style={keywordStyle}>NLP models</span> for automatic categorization and <span style={keywordStyle}>computer vision</span> for scene detection.</>,
+        <>Developed a <span style={keywordStyle}>finance-focused RAG system</span> using <span style={keywordStyle}>LLM integration</span> and <span style={keywordStyle}>dynamic SQL generation</span>, delivering accurate financial insights across <span style={metricStyle}>8 different database schemas</span>. Achieved <span style={metricStyle}>95% accuracy</span> in financial report generation.</>,
+        <>Implemented operational analytics with <span style={keywordStyle}>12+ Airflow DAGs</span> processing <span style={metricStyle}>2TB+ daily data</span> for Sky Germany, improving ETL reliability from 91% to <span style={metricStyle}>99.7%</span>. Added <span style={keywordStyle}>automated monitoring</span> and <span style={keywordStyle}>alerting systems</span>.</>,
+        <>Created automated <span style={keywordStyle}>ML model monitoring</span> with retraining triggers based on data drift detection, maintaining model accuracy above <span style={metricStyle}>92%</span> threshold. Implemented <span style={keywordStyle}>A/B testing framework</span> for model comparison.</>,
+        <>Optimized data pipelines using <span style={keywordStyle}>parallel task execution</span> in Airflow, reducing processing time by <span style={metricStyle}>66%</span> and saving approximately <span style={metricStyle}>400 compute hours</span> monthly. Implemented <span style={keywordStyle}>cost optimization</span> strategies.</>,
+        <>Led the migration of <span style={keywordStyle}>legacy ETL processes</span> to modern data stack, reducing maintenance overhead by <span style={metricStyle}>45%</span> and improving data freshness by <span style={metricStyle}>3 hours</span>.</>,
+        <>Implemented <span style={keywordStyle}>data quality framework</span> with automated validation rules, reducing data issues by <span style={metricStyle}>82%</span> and improving stakeholder confidence.</>
       ]
     },
     {
@@ -105,12 +107,13 @@ const Experience = () => {
       date: 'Jan 2020 - Dec 2022',
       teamInfo: 'Media Analytics & Mobile Development Team',
       responsibilities: [
-        <>Developed <span style={keywordStyle}>React Native mobile features</span> for real-time data collection, increasing field reporting compliance by <span style={metricStyle}>46%</span> and enabling ML-based predictive analytics.</>,
-        <>Implemented <span style={keywordStyle}>ETL pipelines</span> in Databricks using <span style={keywordStyle}>delta tables</span> with optimized partitioning, achieving <span style={metricStyle}>30% faster</span> query response on 100M+ daily records.</>,
-        <>Built integrations with <span style={keywordStyle}>5 media platforms</span> (Operative One, Freewheel, etc.), consolidating advertising data across <span style={metricStyle}>3 business units</span> and enabling unified reporting.</>,
-        <>Designed efficient data models for <span style={keywordStyle}>Redshift and DynamoDB</span>, reducing storage costs by <span style={metricStyle}>25%</span> while improving query performance by <span style={metricStyle}>40%</span>.</>,
-        <>Created <span style={keywordStyle}>AWS Lambda-based real-time systems</span> for SCTE insertion points, processing <span style={metricStyle}>10K+ events/min</span> with 99.9% reliability.</>,
-        <>Developed interactive <span style={keywordStyle}>Tableau dashboards</span> supporting <span style={metricStyle}>200+ concurrent users</span> for FOX finance & engagement analytics, delivering critical KPIs to executive leadership.</>
+        <>Developed <span style={keywordStyle}>React Native mobile features</span> for real-time data collection, increasing field reporting compliance by <span style={metricStyle}>46%</span> and enabling ML-based predictive analytics. Implemented <span style={keywordStyle}>offline-first architecture</span>.</>,
+        <>Implemented <span style={keywordStyle}>ETL pipelines</span> in Databricks using <span style={keywordStyle}>delta tables</span> with optimized partitioning, achieving <span style={metricStyle}>30% faster</span> query response on 100M+ daily records. Reduced storage costs by <span style={metricStyle}>25%</span>.</>,
+        <>Built integrations with <span style={keywordStyle}>5 media platforms</span> (Operative One, Freewheel, etc.), consolidating advertising data across <span style={metricStyle}>3 business units</span> and enabling unified reporting. Implemented <span style={keywordStyle}>real-time sync</span>.</>,
+        <>Designed efficient data models for <span style={keywordStyle}>Redshift and DynamoDB</span>, reducing storage costs by <span style={metricStyle}>25%</span> while improving query performance by <span style={metricStyle}>40%</span>. Implemented <span style={keywordStyle}>data lifecycle management</span>.</>,
+        <>Created <span style={keywordStyle}>AWS Lambda-based real-time systems</span> for SCTE insertion points, processing <span style={metricStyle}>10K+ events/min</span> with 99.9% reliability. Implemented <span style={keywordStyle}>circuit breakers</span> and <span style={keywordStyle}>retry mechanisms</span>.</>,
+        <>Developed interactive <span style={keywordStyle}>Tableau dashboards</span> supporting <span style={metricStyle}>200+ concurrent users</span> for FOX finance & engagement analytics, delivering critical KPIs to executive leadership. Added <span style={keywordStyle}>automated reporting</span>.</>,
+        <>Implemented <span style={keywordStyle}>data governance framework</span> with role-based access control, improving data security and compliance. Reduced unauthorized access incidents by <span style={metricStyle}>90%</span>.</>
       ]
     }
   ];

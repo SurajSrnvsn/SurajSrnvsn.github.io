@@ -27,17 +27,6 @@ const Header = () => {
     marginBottom: '20px',
   };
 
-  const aiTagStyle = {
-    display: 'inline-block',
-    padding: '5px 15px',
-    backgroundColor: 'rgba(58, 123, 213, 0.2)',
-    borderRadius: '20px',
-    color: '#00d2ff',
-    fontSize: '0.9rem',
-    marginTop: '10px',
-    border: '1px solid rgba(0, 210, 255, 0.3)',
-  };
-
   const particles = Array.from({ length: 20 }).map((_, i) => ({
     id: i,
     size: Math.random() * 3 + 1,
@@ -95,15 +84,6 @@ const Header = () => {
         AI/ML Engineer | Full Stack Developer | Data Scientist
       </motion.p>
       
-      <motion.div 
-        style={aiTagStyle}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-        whileHover={{ scale: 1.05 }}
-      >
-        AI-Powered Solutions
-      </motion.div>
     </motion.header>
   );
 };
