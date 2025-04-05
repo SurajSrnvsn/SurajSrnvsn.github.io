@@ -17,7 +17,7 @@
   ],
   "author": "Suraj Srnvsn",
   "license": "ISC",
-  "homepage": "https://SurajSrnvsn.github.io/SurajSrnvsn.github.io",
+  "homepage": "https://SurajSrnvsn.github.io",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
