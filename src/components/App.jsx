@@ -4,11 +4,11 @@ import About from './About';
 import Skills from './Skills';
 import Experience from './Experience';
 import Projects from './Projects';
+import TetrisGame from './TetrisGame';
 import Education from './Education';
 import Contact from './Contact';
 import ThemeToggle from './ThemeToggle';
 import TetrisBackground from './TetrisBackground';
-import TetrisGame from './TetrisGame';
 import { ThemeContext } from '../ThemeContext';
 
 const App = () => {
@@ -23,11 +23,11 @@ const App = () => {
         <Skills />
         <Experience />
         <Projects />
+        <TetrisGame />
         <Education />
         <Contact />
       </div>
       <ThemeToggle />
-      <TetrisGame />
     </div>
   );
 };

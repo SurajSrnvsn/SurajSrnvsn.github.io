@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const TetrisGame = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const canvasRef = useRef(null);
@@ -10,7 +10,8 @@ const TetrisGame = () => {
     currentPiece: null,
     nextPiece: null,
     position: { x: 0, y: 0 },
-    gameLoop: null
+    gameLoop: null,
+    speed: 500 // Initial speed in milliseconds
   });
 
   const colors = [
@@ -166,7 +167,13 @@ const TetrisGame = () => {
         y++;
       }
     }
-    setScore(prev => prev + linesCleared * 100);
+    if (linesCleared > 0) {
+      setScore(prev => prev + linesCleared * 100);
+      // Increase speed based on score
+      gameState.current.speed = Math.max(100, 500 - Math.floor(score / 1000) * 50);
+      clearInterval(gameState.current.gameLoop);
+      gameState.current.gameLoop = setInterval(moveDown, gameState.current.speed);
+    }
   };
 
   const startGame = () => {
@@ -174,7 +181,9 @@ const TetrisGame = () => {
     gameState.current.currentPiece = createPiece();
     setGameOver(false);
     setScore(0);
-    gameState.current.gameLoop = setInterval(moveDown, 1000);
+    gameState.current.speed = 500; // Reset speed
+    clearInterval(gameState.current.gameLoop);
+    gameState.current.gameLoop = setInterval(moveDown, gameState.current.speed);
   };
 
   useEffect(() => {
@@ -201,73 +210,84 @@ const TetrisGame = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isVisible, gameOver]);
 
-  const toggleGame = () => {
-    if (!isVisible) {
-      startGame();
-    }
-    setIsVisible(!isVisible);
-  };
-
   return (
-    <div 
-      className="tetris-game"
-      style={{
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        zIndex: 1000,
-        cursor: 'pointer',
-        filter: isVisible ? 'none' : 'blur(5px)',
-        transition: 'filter 0.3s ease'
-      }}
-      onClick={toggleGame}
-    >
-      <canvas
-        ref={canvasRef}
-        width={300}
-        height={600}
+    <section className="section">
+      <h2 className="section-title">Play Tetris</h2>
+      <div 
+        className="tetris-game"
         style={{
-          border: '2px solid #2c3e50',
-          borderRadius: '4px',
-          backgroundColor: 'rgba(0, 0, 0, 0.8)'
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '20px'
         }}
-      />
-      {gameOver && (
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          color: 'white',
-          textAlign: 'center'
-        }}>
-          <h3>Game Over!</h3>
-          <p>Score: {score}</p>
-          <button 
-            onClick={(e) => {
-              e.stopPropagation();
-              startGame();
+      >
+        <div style={{ position: 'relative' }}>
+          <canvas
+            ref={canvasRef}
+            width={300}
+            height={600}
+            style={{
+              border: '2px solid #2c3e50',
+              borderRadius: '4px',
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              filter: isVisible ? 'none' : 'blur(5px)',
+              transition: 'filter 0.3s ease'
             }}
+            onClick={() => setIsVisible(!isVisible)}
+          />
+          {gameOver && (
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              color: 'white',
+              textAlign: 'center'
+            }}>
+              <h3>Game Over!</h3>
+              <p>Score: {score}</p>
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  startGame();
+                }}
+                style={{
+                  padding: '8px 16px',
+                  marginTop: '10px',
+                  cursor: 'pointer'
+                }}
+              >
+                Play Again
+              </button>
+            </div>
+          )}
+          <div style={{
+            position: 'absolute',
+            top: '10px',
+            left: '10px',
+            color: 'white',
+            fontSize: '14px'
+          }}>
+            Score: {score}
+          </div>
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          <p>Controls:</p>
+          <p>← → : Move | ↑ : Rotate | ↓ : Drop Faster</p>
+          <button 
+            onClick={startGame}
             style={{
               padding: '8px 16px',
               marginTop: '10px',
               cursor: 'pointer'
             }}
           >
-            Play Again
+            Start Game
           </button>
         </div>
-      )}
-      <div style={{
-        position: 'absolute',
-        top: '10px',
-        left: '10px',
-        color: 'white',
-        fontSize: '14px'
-      }}>
-        Score: {score}
       </div>
-    </div>
+    </section>
   );
 };
 
